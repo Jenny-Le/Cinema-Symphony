@@ -15,7 +15,10 @@ $(document).ready(function() {
         console.log(response.Poster)
 
        $("#moviePoster").append(posterTag); 
-       $('#posterImg').attr("src", response.Poster); 
+       $('#posterImg').attr("src", response.Poster);
+       $("#movieSummary").text(response.Plot) 
+
+     
 
  	console.log(title);
     });
