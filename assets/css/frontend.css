@@ -1,0 +1,9 @@
+.jumbotron{
+	background-color: black;
+	color: white;
+}
+
+#searchBar{
+	position: relative;
+	left: 300px;
+}
