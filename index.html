@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Cinema Symphony</title>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="./assets/css/frontend.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema Symphony</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/javascript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/frontend.css">
 </head>
+
 <body>
-<!--title using jumbotron!-->
-	<div class="container">
-	<div class="jumbotron text-center">
-	  <h1>Cinema Symphony</h1>
-	  <p>Get lost in your favorite movies soundtrack!</p>
-	</div>
-	</div>
-<!--search button!-->
-<div class="col-lg-6 text-center" id="searchBar">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for Movie ...">
-      <span class="input-group-btn">
+    <!--title using jumbotron!-->
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Cinema Symphony</h1>
+            <p>Get lost in your favorite movie or television show soundtrack!</p>
+        </div>
+    </div>
+    <!--search button!-->
+    <div class="col-lg-6 text-center" id="searchBar">
+        <div class="input-group">
+            <input id="searchText" type="text" class="form-control" placeholder="Search for Movie or Television Show ...">
+            <span class="input-group-btn">
         <button class="btn btn-default" type="button">Let's Listen</button>
       </span>
+        </div>
     </div>
-  </div>
-</div>
-<!--Box for Movie Poster!-->
-<div class="col-lg-6" class="moviePoster">
-</div>	
-
-<!--text box for movie description!-->
-<!--Box for Spotify Soundtrack!-->
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="./assets/javascript/javascript.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    </div>
+    <!--Box for Movie Poster!-->
+    <div class="col-lg-6" id="moviePoster">
+    </div>
+    <!--text box for movie description!-->
+    <!--Box for Spotify Soundtrack!-->
 </body>
+
 </html>
