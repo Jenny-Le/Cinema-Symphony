@@ -24,7 +24,23 @@ $(document).ready(function() {
         return result;
     }, {});
 
+
     console.log(hashParams);
+    $.ajax({
+        url: "https://api.thetvdb.com/login",
+        type: "POST",
+        data: JSON.stringify({
+            "apikey": "095E931EC69FA5BB",
+            "userkey": "C55905D75BC0C9B9",
+            "username": "lejenny75"
+        }),
+        dataType: "json",
+        contentType: "application/json"
+    }).done(function(response) {
+        console.log(response.token);
+       
+    });
+
 
     $("button").on("click", function() {
         var title = $("#searchText").val();
