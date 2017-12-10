@@ -26,26 +26,11 @@ $(document).ready(function() {
 
 
     console.log(hashParams);
-    $.ajax({
-        url: "https://api.thetvdb.com/login",
-        type: "POST",
-        data: JSON.stringify({
-            "apikey": "095E931EC69FA5BB",
-            "userkey": "C55905D75BC0C9B9",
-            "username": "lejenny75"
-        }),
-        dataType: "json",
-        contentType: "application/json"
-    }).done(function(response) {
-        console.log(response.token);
-       
-    });
 
 
     $("button").on("click", function() {
         var title = $("#searchText").val();
-        var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=d840ff4";
-        var posterImage = "http://img.omdbapi.com/?apikey=d840ff4";
+        var queryURL = "https://api.themoviedb.org/3/search/tv?api_key=03bc4746355eca7b85d94dff54c55926&language=en-US&query=" + title + "&page=1"
         var posterTag = $("<img id='posterImg'>");
 
 
@@ -60,18 +45,17 @@ $(document).ready(function() {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).done(function(response) {
-            console.log(response);
-            console.log(response.Plot)
-            console.log(response.Runtime);
-            console.log(response.Poster)
+        }).done(function(apiResponse) {
+            let response = apiResponse.results[0]
+            console.log(response.overview)
+            console.log(response.poster_path)
 
 
 
             $("#moviePoster").append(posterTag);
-            $('#posterImg').attr("src", response.Poster);
-            $("#movieSummary").text(response.Plot)
-            let albumName = response.Title
+            $('#posterImg').attr("src", "https://image.tmdb.org/t/p/w500" + response.poster_path);
+            $("#movieSummary").text(response.overview)
+            let albumName = response.original_name
             let queryURL = "https://api.spotify.com/v1/search?type=album&market=US&limit=1&q=" + albumName
             $.ajax({
                 type: "GET",
