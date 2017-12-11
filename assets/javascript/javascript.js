@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     $("button").on("click", function() {
         var title = $("#searchText").val();
-        var queryURL = "https://api.themoviedb.org/3/search/tv?api_key=03bc4746355eca7b85d94dff54c55926&language=en-US&query=" + title + "&page=1"
+        var queryURL = "https://api.themoviedb.org/3/search/multi?api_key=03bc4746355eca7b85d94dff54c55926&language=en-US&query=" + title + "&page=1"
         var posterTag = $("<img id='posterImg'>");
         $(".noMovie").hide();
         $("#moviePoster").removeClass("tada animated");
