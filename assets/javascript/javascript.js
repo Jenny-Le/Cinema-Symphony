@@ -58,7 +58,13 @@ $(document).ready(function() {
                 $('#posterImg').attr("src", "https://image.tmdb.org/t/p/w500" + response.poster_path);
                 $("#moviePoster").attr("class", "tada animated");
                 $("#movieSummary").text(response.overview)
-                let albumName = response.original_name
+
+                if(response.original_name == undefined) {
+                    var albumName = response.original_title
+                } else {
+                    var albumName = response.original_name
+                }
+
                 let queryURL = "https://api.spotify.com/v1/search?type=album&market=US&limit=1&q=" + albumName
                 $.ajax({
                     type: "GET",
