@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cinema Symphony</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/javascript/javascript.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
@@ -15,8 +16,8 @@
     <!--title using jumbotron!-->
     <div class="container">
         <div class="jumbotron text-center">
-            <h1>Cinema Symphony</h1>
-            <p>Get lost in your favorite movie or television show soundtrack!</p>
+            <h1 class="wobble animated">Cinema Symphony</h1>
+            <p class="fadeInRight animated">Get lost in your favorite movie or television show soundtrack!</p>
         </div>
     </div>
     <!--search button!-->
@@ -29,6 +30,7 @@
         </div>
     </div>
     </div>
+    <h3 hidden class="noMovie"> Sorry, Nothing found for your search!</h3>
     <!--Box for Movie Poster!-->
     <div class="col-lg-6" id="moviePoster">
     </div>
