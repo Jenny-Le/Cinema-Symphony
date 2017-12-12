@@ -51,9 +51,10 @@ body {
 
 #moviePoster {
 	display: block; 
-	float: left;
+	/*float: left;*/
 	width: 100%;
 }
+
 
 /*#movieSummary {
     color: #a29f9f;
