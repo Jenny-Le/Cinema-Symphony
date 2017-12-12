@@ -1,9 +1,44 @@
+body {
+    background-color: black;
+}
 .jumbotron{
-	background-color: white;
-	color: red;
+	background-color: black;
+	color: white;
 }
 
 #searchBar{
 	position: relative;
 	left: 300px;
+}
+
+.jumbotron h1{
+	font-weight: 900
+	text-transform:uppercase;
+	letter-spacing:3px;
+	font-size: 50px;
+	margin-top: -3%;
+}
+
+.jumbotron p{
+	font-weight: 900
+	text-transform:uppercase;
+	letter-spacing:3px;
+	font-size: 15px;
+}
+
+#movieSummary{
+	color: white;
+	font-weight: 900
+	text-transform:uppercase;
+	letter-spacing:3px;
+	font-size: 15px;
+}
+.input-group{
+	position: a;
+	padding-left: 20%;
+	margin-top: -10%;
+}
+
+#posterImg{
+	margin-left: -15%;
 }
