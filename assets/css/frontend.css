@@ -42,7 +42,19 @@ body {
 
 #posterImg{
 	margin-left: -15%;
+	margin: 0 auto; 
+	display: table;
+	opacity: .8;
+	box-shadow: 0 0 8px 8px black inset;
+
 }
+
+#moviePoster {
+	display: block; 
+	float: left;
+	width: 100%;
+}
+
 /*#movieSummary {
     color: #a29f9f;
     letter-spacing: 1px;
