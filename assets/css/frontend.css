@@ -22,16 +22,17 @@ body {
 .jumbotron p{
 	font-weight: 900
 	text-transform:uppercase;
-	letter-spacing:3px;
+	letter-spacing:1px;
 	font-size: 15px;
 }
 
 #movieSummary{
 	color: white;
-	font-weight: 900
 	text-transform:uppercase;
-	letter-spacing:3px;
-	font-size: 15px;
+	letter-spacing:1px;
+	font-size: 10px;
+	margin-top: 20px;
+	text-align: center
 }
 .input-group{
 	position: a;
@@ -42,3 +43,10 @@ body {
 #posterImg{
 	margin-left: -15%;
 }
+/*#movieSummary {
+    color: #a29f9f;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: -15%;
+    text-align: center;
+    }*/
