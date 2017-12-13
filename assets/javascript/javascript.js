@@ -27,6 +27,8 @@ $(document).ready(function() {
         result[parts[0]] = parts[1];
         return result;
     }, {});
+    //  hash.split this takes the hash string/token string from the URL and creats an object out of it with a key value
+    // item.split splits the string. 
 
 
     console.log(hashParams);
