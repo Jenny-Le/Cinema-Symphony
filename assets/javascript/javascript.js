@@ -56,7 +56,7 @@ $(document).ready(function() {
                 console.log(response.poster_path)
                 $("#moviePoster").append(posterTag);
                 $('#posterImg').attr("src", "https://image.tmdb.org/t/p/w500" + response.poster_path);
-                $("#moviePoster").attr("class", "fadeIn animated");
+                $("#moviePoster").attr("class", "fadeIn animated movie-poster");
                 $("#movieSummary").text(response.overview)
 
                 if(response.original_name == undefined) {

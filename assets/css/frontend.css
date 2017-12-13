@@ -47,7 +47,7 @@ body {
 	display: table;
 	opacity: .8;
 	box-shadow: 0 0 8px 8px black inset;
-	margin-top: -57%;
+	margin-top: -70%;
 
 }
 
@@ -57,10 +57,7 @@ body {
 	width: 100%;
 }
 
-#albums-container{
-	float: right;
-	margin-right: 50px;
-}
+
 
 /*#movieSummary {
     color: #a29f9f;
