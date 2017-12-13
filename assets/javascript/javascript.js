@@ -12,6 +12,10 @@ $(document).ready(function() {
     var database = firebase.database();
 
     var hash = window.location.hash.substr(1);
+    // we needed this because it pulls back the "#whatever" if there's something like that in URL
+    // basically a hashtag and whatever follows. We needed this to extract the token we get back from the spotify
+    // after spotify logs us in, they redirect you back with #sometoken attached to our URL and we need the same API
+    // to them to search for albums, artists.. etc
 
 
     if (hash == "") {
