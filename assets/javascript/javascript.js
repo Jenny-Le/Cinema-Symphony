@@ -12,6 +12,10 @@ $(document).ready(function() {
     var database = firebase.database();
 
     var hash = window.location.hash.substr(1);
+    // we needed this because it pulls back the "#whatever" if there's something like that in URL
+    // basically a hashtag and whatever follows. We needed this to extract the token we get back from the spotify
+    // after spotify logs us in, they redirect you back with #sometoken attached to our URL and we need the same API
+    // to them to search for albums, artists.. etc
 
 
     if (hash == "") {
@@ -23,6 +27,8 @@ $(document).ready(function() {
         result[parts[0]] = parts[1];
         return result;
     }, {});
+    //  hash.split this takes the hash string/token string from the URL and creats an object out of it with a key value
+    // item.split splits the string. 
 
 
     console.log(hashParams);
@@ -71,6 +77,7 @@ $(document).ready(function() {
                     url: queryURL,
                     headers: {
                         "Authorization": "Bearer " + hashParams.access_token
+                        // bearer is standered for passing in tokens
                     },
                     dataType: 'json'
                 }).done(function(response) {

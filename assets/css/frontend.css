@@ -47,7 +47,9 @@ body {
 	display: table;
 	opacity: .8;
 	box-shadow: 0 0 8px 8px black inset;
-	margin-top: -70%;
+	margin-top: -139%;
+	
+
 
 }
 
@@ -55,6 +57,17 @@ body {
 	display: block; 
 	/*float: left;*/
 	width: 100%;
+}
+
+#spotify-player{
+	margin-top: 10px;
+}
+
+.footer{
+/*	position: fixed;
+*/	bottom: 10%;
+	padding-left: 20%;
+	padding-right:20%;
 }
 
 
