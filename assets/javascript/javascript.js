@@ -77,6 +77,7 @@ $(document).ready(function() {
                     url: queryURL,
                     headers: {
                         "Authorization": "Bearer " + hashParams.access_token
+                        // bearer is standered for passing in tokens
                     },
                     dataType: 'json'
                 }).done(function(response) {
