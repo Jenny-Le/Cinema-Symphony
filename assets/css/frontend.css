@@ -70,6 +70,11 @@ body {
 	padding-right:20%;
 }
 
+.noMovie{
+	color: gray;
+	text-align: center;
+}
+
 
 
 /*#movieSummary {

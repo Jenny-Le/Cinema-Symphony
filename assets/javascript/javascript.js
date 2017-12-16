@@ -33,8 +33,19 @@ $(document).ready(function() {
 
     console.log(hashParams);
 
+    $("#searchText").on("keypress", function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which); // ? means shorthand for if and else ternary
+        if (keycode == '13') {
+            searchMovie();
+        }
+    });
+
 
     $("button").on("click", function() {
+        searchMovie();
+    });
+
+    var searchMovie = function() {
         var title = $("#searchText").val();
         var queryURL = "https://api.themoviedb.org/3/search/multi?api_key=03bc4746355eca7b85d94dff54c55926&language=en-US&query=" + title + "&page=1"
         var posterTag = $("<img id='posterImg'>");
@@ -49,7 +60,6 @@ $(document).ready(function() {
         });
 
 
-
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -57,6 +67,8 @@ $(document).ready(function() {
 
 
             if (apiResponse.results.length > 0) {
+                $(".noMovie").hide()
+                $(".result-hide").show()
                 let response = apiResponse.results[0]
                 console.log(response.overview)
                 console.log(response.poster_path)
@@ -65,7 +77,7 @@ $(document).ready(function() {
                 $("#moviePoster").attr("class", "fadeIn animated movie-poster");
                 $("#movieSummary").text(response.overview)
 
-                if(response.original_name == undefined) {
+                if (response.original_name == undefined) {
                     var albumName = response.original_title
                 } else {
                     var albumName = response.original_name
@@ -88,22 +100,12 @@ $(document).ready(function() {
                     $('#spotify-player').show();
                 })
 
-
             } else {
                 $(".noMovie").show()
-
-
+                $(".result-hide").hide()
             }
-
-
-
-
         });
-
-
-
-
-    });
+    }
 
 
 
