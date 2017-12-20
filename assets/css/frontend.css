@@ -57,7 +57,9 @@ body {
 	width: 100%;
 }
 
-
+.main {
+	background-color: red;
+}
 
 /*#movieSummary {
     color: #a29f9f;

@@ -11,21 +11,21 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    var hash = window.location.hash.substr(1);
+    // var hash = window.location.hash.substr(1);
 
 
-    if (hash == "") {
-        window.location = "https://accounts.spotify.com/authorize?redirect_uri=https://jenny-le.github.io/project-1/index.html&client_id=33df74e9fe14409b96de744f35f548b2&response_type=token"
-    }
+    // if (hash == "") {
+    //     window.location = "https://accounts.spotify.com/authorize?redirect_uri=https://jenny-le.github.io/project-1/index.html&client_id=33df74e9fe14409b96de744f35f548b2&response_type=token"
+    // }
 
-    var hashParams = hash.split('&').reduce(function(result, item) {
-        var parts = item.split('=');
-        result[parts[0]] = parts[1];
-        return result;
-    }, {});
+    // var hashParams = hash.split('&').reduce(function(result, item) {
+    //     var parts = item.split('=');
+    //     result[parts[0]] = parts[1];
+    //     return result;
+    // }, {});
 
 
-    console.log(hashParams);
+    // console.log(hashParams);
 
 
     $("button").on("click", function() {
@@ -65,21 +65,21 @@ $(document).ready(function() {
                     var albumName = response.original_name
                 }
 
-                let queryURL = "https://api.spotify.com/v1/search?type=album&market=US&limit=1&q=" + albumName
-                $.ajax({
-                    type: "GET",
-                    url: queryURL,
-                    headers: {
-                        "Authorization": "Bearer " + hashParams.access_token
-                    },
-                    dataType: 'json'
-                }).done(function(response) {
-                    console.log(response)
-                    let albumID = response.albums.items[0].id;
-                    let iframeURL = "https://open.spotify.com/embed?uri=spotify:album:" + albumID;
-                    $('#spotify-player').attr('src', iframeURL);
-                    $('#spotify-player').show();
-                })
+                // let queryURL = "https://api.spotify.com/v1/search?type=album&market=US&limit=1&q=" + albumName
+                // $.ajax({
+                //     type: "GET",
+                //     url: queryURL,
+                //     headers: {
+                //         "Authorization": "Bearer " + hashParams.access_token
+                //     },
+                //     dataType: 'json'
+                // }).done(function(response) {
+                //     console.log(response)
+                //     let albumID = response.albums.items[0].id;
+                //     let iframeURL = "https://open.spotify.com/embed?uri=spotify:album:" + albumID;
+                //     $('#spotify-player').attr('src', iframeURL);
+                //     $('#spotify-player').show();
+                // })
 
 
             } else {
