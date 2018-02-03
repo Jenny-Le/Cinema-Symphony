@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 
     if (hash == "") {
-        window.location = "https://accounts.spotify.com/authorize?redirect_uri=https://jenny-le.github.io/project-1/index.html&client_id=33df74e9fe14409b96de744f35f548b2&response_type=token"
+        window.location = "https://accounts.spotify.com/authorize?redirect_uri=https://jenny-le.github.io/Cinema-Symphony&client_id=33df74e9fe14409b96de744f35f548b2&response_type=token"
     }
 
     var hashParams = hash.split('&').reduce(function(result, item) {
